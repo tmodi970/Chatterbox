@@ -1,0 +1,46 @@
+{
+  "name": "rf222fu-project",
+  "version": "1.0.0",
+  "description": "Projektkatalog tillhörande Rasmus Falk",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1dv430/rf222fu-project.git"
+  },
+  "author": "Rasmus Falk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1dv430/rf222fu-project/issues"
+  },
+  "homepage": "https://github.com/1dv430/rf222fu-project#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "bootstrap": "^4.5.2",
+    "connect-mongo": "^2.0.1",
+    "cors": "^2.8.4",
+    "csurf": "^1.9.0",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "helmet": "^3.12.1",
+    "mongoose": "^5.0.11",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth20": "^1.0.0",
+    "socket.io": "^2.1.0",
+    "uniqid": "^4.1.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.0",
+    "nodemon": "^1.17.3",
+    "supertest": "^3.0.0"
+  }
+}

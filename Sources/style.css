@@ -1,0 +1,12 @@
+header{background:url(bg1.jpg);background-size: 100% 100%;width: 100%;background-attachment: fixed;}
+.brand{border-bottom: 3px solid #f82249}
+.over{background:rgba(0,0,15,.8) ;height: 100%!important;width: 100%;padding-bottom: 16.5%}
+.nav-b{color:rgba(255,255,255,.7)!important;font-size:1.3em!important;font-weight: 500!important}
+.nav-b:hover{color:rgba(255,255,255)!important}
+.toph2{color: rgba(255,255,255);font-size: 3em;font-weight: 700;}
+.hr1{border:none!important;height:3px!important;background:#f82249;width: 5%}
+.topp{color: rgba(255,255,255,.7);font-weight: 300;line-height: 30px;font-size: 1.3em;}
+.topbtn{border:2px inset #f82249!important;background: #f82249!important;border-radius: 30px!important;color: white!important;}
+.topbtn:hover{background: transparent !important;transition: .5s}
+
+
