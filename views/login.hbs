@@ -1,48 +1,39 @@
-{{>cookie}} {{>flash}}
+{{>cookie}}{{>flash}}
 
-<div class="card" id="login">
-  <div class="card-content">
-    <p class="title">Welcome to PeerChat</p>
-    <p class="subtitle">Login to continue</p>
-
-    <form action="/login" method="post">
-      <div class="field">
-        <label class="label">Email</label>
-        <div class="control">
-          <input class="input" type="email" placeholder="Enter email" name="email" required>
-        </div>
-      </div>
-
-      <div class="field">
-        <label class="label">Password</label>
-        <div class="control">
-          <input class="input" type="password" placeholder="Enter password" name="password" required>
-        </div>
-      </div>
-
-      <div class="field">
-        <div class="control has-text-centered">
-          <button type="submit" class="button is-primary" id="loginBtn">Login</button>
-        </div>
-      </div>
-
-      <div class="field google">
-        <div class="control has-text-centered">
-          <a class="button is-warning oauthBtn" href="/auth/google">Google</a>
-        </div>
-
-        <div class="field facebook">
-          <div class="control has-text-centered">
-            <a class="button is-info oauthBtn" href="/auth/facebook">Facebook</a>
+<div class="container text-center text-light mt-5 pt-5">
+  <div class="row">
+    {{!-- #501b1d,922724 --}}
+    <div class="col-lg-6 offset-lg-3 border p-5 mt-5" style="background-color:#922724; border-color:#f82249!important;" >
+      <p>Login to continue</p>
+      <form action="/login" method="post">
+        <div class="row mt-4">
+          <div class="col-sm-3 custom_label">
+            <label for="email">Email:</label>
           </div>
-
-          <div class="field">
-            <div class="control has-text-centered">
+          <div class="col-sm-9">
+            <input type="email" class="form-control" name="email" placeholder="Enter Email" required />
+          </div>
+        </div> 
+        <div class="row mt-4">
+          <div class="col-sm-3 custom_label">
+            <label for="password">Password:</label>
+          </div>
+          <div class="col-sm-9">
+            <input type="password" class="form-control" name="password" placeholder="Enter Password" required />
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-sm-12">
+            <input type="submit" style="background-color:#f82249" class="btn topbtn px-5 py-2" id="loginBtn" value="Login">
+          </div>
+          <div class="col-sm-12">
               <p>Don't have an account?
-                <a class="is-link" href="/register" id="registerBtn">Register here</a>
+                <a href="/register" id="registerBtn">Register here</a>
+                <input type="hidden" name="_csrf" value="{{csrfToken}}">
               </p>
-            </div>
           </div>
-          <input type="hidden" name="_csrf" value="{{csrfToken}}">
-    </form>
+        </div>
+      </form>
     </div>
+  </div>
+</div>
