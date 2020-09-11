@@ -1,43 +1,46 @@
 {{>flash}}
-<div class="container text-center text-light mt-5 pt-5">
+<div class="container text-light mt-5 pt-5">
   <div class="row">
     {{!-- #501b1d,922724 --}}
-    <div class="col-lg-6 offset-lg-3 border p-5 mt-5" style="background-color:#922724; border-color:#f82249!important;" >
-      <p>Register</p>
-      <form action="/register" method="post">
+    <div class="col-lg-6 offset-lg-3 mt-5 px-0">
+      <form action="/register" class="form" method="post">
         <div class="row mt-4">
-          <div class="col-sm-3 custom_label">
-            <label for="name">Full name</label>
+          <div class="col-sm-12 text-center">
+            <h2>Register</h2>
+            <hr noshade>
           </div>
-          <div class="col-sm-9">
+          <div class="col-sm-4 custom_label">
+            <label for="name">Full name:</label>
+          </div>
+          <div class="col-sm-8">
             <input type="text" class="form-control" name="fullName" placeholder="Enter Full Name" required />
           </div>
         </div> 
         <div class="row mt-4">
-          <div class="col-sm-3 custom_label">
+          <div class="col-sm-4 custom_label">
             <label for="email">Email:</label>
           </div>
-          <div class="col-sm-9">
+          <div class="col-sm-8">
             <input type="email" class="form-control" name="email" placeholder="Enter Email" required />
           </div>
         </div> 
         <div class="row mt-4">
-          <div class="col-sm-3 custom_label">
+          <div class="col-sm-4 custom_label">
             <label for="email">Password:</label>
           </div>
-          <div class="col-sm-9">
+          <div class="col-sm-8">
             <input type="password" class="form-control" name="password" placeholder="Enter Password" required />
           </div>
         </div>
         <div class="row mt-4">
-          <div class="col-sm-3 custom_label">
+          <div class="col-sm-4 custom_label">
             <label for="passwordRepeat">Repeat Password:</label>
           </div>
-          <div class="col-sm-9">
+          <div class="col-sm-8">
             <input type="password" class="form-control" name="passwordRepeat" placeholder="Confirm Password" required />
           </div>
         </div>
-        <div class="row mt-4">
+        <div class="row mt-4 text-center">
           <div class="col-sm-12">
             <input type="submit" style="background-color:#f82249" class="btn topbtn px-5 py-2" id="loginBtn" value="Register">
             <a class="btn topbtn px-5 py-2" href="/login" id="cancel">Cancel</a>

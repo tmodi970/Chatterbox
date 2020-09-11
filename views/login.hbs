@@ -1,29 +1,27 @@
 {{>cookie}}{{>flash}}
 
-<div class="container text-center text-light mt-5 pt-5">
+<div class="container text-light mt-5 pt-5">
   <div class="row">
-    {{!-- #501b1d,922724 --}}
-    <div class="col-lg-6 offset-lg-3 border p-5 mt-5" style="background-color:#922724; border-color:#f82249!important;" >
-      <p>Login to continue</p>
-      <form action="/login" method="post">
+    <div class="col-lg-6 offset-lg-3 mt-5" >
+      <form action="/login" class="form px-5" style=" border-color:#f82249!important;" method="post">
         <div class="row mt-4">
-          <div class="col-sm-3 custom_label">
-            <label for="email">Email:</label>
+          <div class="col-sm-12 text-center">
+            <h2>Login to continue</h2>
+            <hr noshade>
           </div>
-          <div class="col-sm-9">
+          <div class="col-sm-12">
+            <label for="email">Email:</label>
             <input type="email" class="form-control" name="email" placeholder="Enter Email" required />
           </div>
         </div> 
         <div class="row mt-4">
-          <div class="col-sm-3 custom_label">
+          <div class="col-sm-12">
             <label for="password">Password:</label>
-          </div>
-          <div class="col-sm-9">
             <input type="password" class="form-control" name="password" placeholder="Enter Password" required />
           </div>
         </div>
         <div class="row mt-4">
-          <div class="col-sm-12">
+          <div class="col-sm-12 text-center">
             <input type="submit" style="background-color:#f82249" class="btn topbtn px-5 py-2" id="loginBtn" value="Login">
           </div>
           <div class="col-sm-12">
