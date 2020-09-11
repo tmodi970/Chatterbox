@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-sm-8">
+    <img src="{{currentUser.avatar}}">
+    <span class="status" [ngClass]="{'online' : currentUser.status === 'online', 'offline' : currentUser.status === 'offline', 'away' : currentUser.status === 'away', 'busy' : currentUser.status === 'busy'}"></span>
+    <span class="name">{{currentUser.fullName}}</span>
+    <br>
+    <div class="select">
+      <select #status (input)="changeStatus(status.value)">
+        <option value="online" selected>online</option>
+        <option value="away">away</option>
+        <option value="busy">busy</option>
+        <option value="offline">offline</option>
+        <hr>
+        <option value="signout">sign out</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <button class="button is-primary" (click)="toggleAudio()">
+      <span class="icon is-small">
+        <i [ngClass]="{'ion-md-volume-high' : allowAudio, 'ion-md-volume-off' : !allowAudio}"></i>
+      </span>
+    </button>
+  </div>
+</div>

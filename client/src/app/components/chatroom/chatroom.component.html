@@ -1,0 +1,47 @@
+<div class="row" [hidden]="!loading">
+  <div class="col-sm-12 loading">
+    <app-loading></app-loading>
+  </div>
+</div>
+<div class="row" *ngIf="!loading">
+    <div class="col-sm-4 coloum-left">
+        <div class="row">
+          <div class="col-sm-12 current-user">
+            <app-current-user></app-current-user>
+          </div>
+          <div class="col-sm-12 search">
+            <app-search></app-search>
+          </div>
+          <div class="col-sm-12 friend-requests">
+            <app-friend-requests></app-friend-requests>
+          </div>
+          <div class="col-sm-12 user-list">
+            <app-user-list></app-user-list>
+          </div>
+        </div>
+    </div>
+    <div class="col-sm-8 coloum-right">
+      <div *ngIf="calling || dialing">
+        <app-popup></app-popup>
+      </div>
+      <div *ngIf="flashMessage.type !== null">
+        <app-flash-message></app-flash-message>
+      </div>
+      <div class="row" [style.display]="displayWelcome">
+        <div class="col-sm-12 welcome" >
+          <app-welcome></app-welcome>
+        </div>
+      </div>
+      <div class="row" [style.display]="displayChatComponents">
+        <div class="col-sm-12 feed-header">
+          <app-feed-header></app-feed-header>
+        </div>
+        <div class="col-sm-12 feed">
+          <app-feed></app-feed>
+        </div>
+        <div class="col-sm-12 send">
+          <app-send></app-send>
+        </div>
+      </div>
+    </div>
+</div>

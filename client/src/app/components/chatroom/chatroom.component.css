@@ -1,0 +1,37 @@
+.loading {
+  height: 100vh;
+  background-color: rgb(248, 246, 248);
+}
+
+.current-user {
+  background-color: #f82249;
+}
+
+.error,
+.info {
+  position: absolute;
+  width: 100%
+}
+.feed-header {
+  background-color: white;
+  height:11vh;
+}
+
+.feed {
+  background-color: rgb(247, 208, 253);
+  overflow-y: scroll;
+  height:81vh;
+}
+
+.send {
+  background-color: white;
+  height:8vh;
+}
+.coloum-left{
+  height: 100vh;
+  background-color: #922724;
+}
+.coloum-right{
+  height: 100vh;
+  background-color: rgb(248, 246, 248);
+}

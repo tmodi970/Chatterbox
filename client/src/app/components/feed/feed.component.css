@@ -1,0 +1,54 @@
+:host {
+  margin: 0px;
+  padding: 0px;
+}
+
+:host .message {
+  width: 30%;
+  word-wrap: break-word;
+  clear: both;
+  font-size: 16px;
+  word-break: break-all;
+  position: relative;
+  padding: 10px;
+  border-radius: 7px;
+  z-index: 0;
+  margin: 10px;
+}
+
+:host .peer {
+  background-color: rgb(205, 17, 226);
+  float: left;
+  margin-left: 2vw
+}
+
+:host .you {
+  background-color: white;
+  float: right;
+  margin-right: 35.3vw;
+}
+
+:host .peer:before {
+  left: -5px;
+  background-color: rgb(205, 17, 226);
+}
+
+:host .you:before {
+  right: -5px;
+  background-color: white;
+}
+
+:host .message:before {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 26px;
+  top: 9px;
+  content: "";
+  transform: rotate(29deg) skew(-25deg);
+  z-index: -100;
+}
+
+:host ul {
+  padding-top: 20px;
+}

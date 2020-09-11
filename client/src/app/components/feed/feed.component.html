@@ -1,0 +1,15 @@
+<ul>
+  <li *ngFor="let message of activeConversation">
+    <div *ngIf="message.sender === 'you'">
+      <div class="message you">
+        <p>{{message.message}}</p>
+      </div>
+    </div>
+
+    <div *ngIf="message.sender !== 'you'">
+      <div class="message peer">
+        <p class="has-text-white">{{message.message}}</p>
+      </div>
+    </div>
+  </li>
+</ul>
