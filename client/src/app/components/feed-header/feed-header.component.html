@@ -1,0 +1,49 @@
+<audio #audio loop></audio>
+
+<div *ngIf="!calling && !dialing">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <h1 class="title is-4">{{activeUserItem.fullName}}</h1>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <button class="button is-primary" (click)="startVideoCall(activeUserItem.id)">
+            <span class="icon is-small">
+              <i class="ion-md-videocam"></i>
+            </span>
+          </button>
+
+          <button class="button is-primary" (click)="startVoiceCall(activeUserItem.id)">
+            <span class="icon is-small">
+              <i class="ion-md-call"></i>
+            </span>
+          </button>
+
+          <button class="button is-danger trash" (click)="removeFriend(activeUserItem.id)">
+            <span class="icon is-small">
+              <i class="ion-md-trash"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div *ngIf="calling">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <h1 class="title is-4">Incoming {{callInformation.callType}} call from {{callInformation.caller}}...</h1>
+    </div>
+  </nav>
+</div>
+
+<div *ngIf="dialing">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <h1 class="title is-4">Making a {{dialInformation.dialType}} call to {{dialInformation.receiver}}...</h1>
+    </div>
+  </nav>
+</div>

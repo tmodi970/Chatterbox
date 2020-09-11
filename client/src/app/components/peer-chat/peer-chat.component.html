@@ -1,0 +1,30 @@
+<div [hidden]="!loading">
+  <div class="loading">
+    <app-loading></app-loading>
+  </div>
+</div>
+
+<div class="has-text-centered background" #chat hidden>
+  <video class="peer" #peerVideo poster="../../../assets/images/poster.png"></video>
+  <video class="you" #localVideo poster="../../../assets/images/poster.png"></video>
+
+  <div class="buttons">
+    <button class="button" [ngClass]="{'is-primary' : clickMic, 'is-default' : !clickMic}" (click)="toggleMicrophone()" #mic>
+      <span class="icon is-small">
+        <i class="ion-md-mic"></i>
+      </span>
+    </button>
+
+    <button class="button" [ngClass]="{'is-primary' : clickVid, 'is-default' : !clickVid}" (click)="toggleCamera()" #video>
+      <span class="icon is-small">
+        <i class="ion-md-videocam"></i>
+      </span>
+    </button>
+
+    <button class="button is-danger" (click)="endCall()" #end>
+      <span class="icon is-small">
+        <i class="ion-md-call"></i>
+      </span>
+    </button>
+  </div>
+</div>

@@ -8,5 +8,16 @@ header{background:url(bg1.jpg);background-size: 100% 100%;width: 100%;background
 .topp{color: rgba(255,255,255,.7);font-weight: 300;line-height: 30px;font-size: 1.3em;}
 .topbtn{border:2px inset #f82249!important;background: #f82249!important;border-radius: 30px!important;color: white!important;}
 .topbtn:hover{background: transparent !important;transition: .5s}
-
+input{
+    border-radius: 30px!important;
+}
+input:focus{
+    transform: scale(1.1);
+}
+@media only screen and (max-width:576px)
+{
+    .custom_label{
+        display:none;
+    }
+}
 
