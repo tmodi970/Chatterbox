@@ -22,7 +22,7 @@
 }
 
 :host .back {
-  margin-top: 0vh;
+  margin-top: 5px;
   margin-bottom: 10px;
   height: 40px;
   width: 31vw;
@@ -39,6 +39,7 @@
 :host .menu {
   background-color: rgb(72, 21, 78);
   padding: 0px;
+  margin-top: 2px;
 }
 
 :host .menu li {
@@ -61,7 +62,7 @@
 :host .menu .email {
   color: white;
   font-size: 16px;
-  margin-top: -15px;
+  /* margin-top: -15px; */
   display: block;
 }
 
@@ -72,7 +73,7 @@
   display: inline-block;
   position: absolute;
   margin-top: 45px;
-  margin-left: -40px;
+  margin-left: -20px;
 }
 
 .online {
@@ -94,22 +95,15 @@
 :host .menu img {
   width: 70px;
   height: 70px;
-  margin-right: 20px;
   border-radius: 100%;
-  float: left;
-  clear: both;
+  margin-left: 15px;
 }
 
 :host .add {
   background-color: transparent;
   height: 84px;
-  margin-top: -77px;
   width: 58px;
-  margin-right: 67vw;
-  padding: 0px;
-  float: right;
   font-size: 50px;
-  clear: both;
 }
 
 :host .add:active,
@@ -168,9 +162,7 @@
 }
 
 :host .select {
-  right: -18vw;
   font-size: 18px;
-  margin-top: -40px;
 }
 
 :host .select select {
@@ -182,7 +174,6 @@
 
 :host .select:after {
   margin-right: 20px;
-  margin-top: -15px;
   font-size: 35px;
 }
 

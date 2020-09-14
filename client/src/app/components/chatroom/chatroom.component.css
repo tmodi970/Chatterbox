@@ -14,18 +14,18 @@
 }
 .feed-header {
   background-color: white;
-  height:11vh;
+  min-height:11vh;
 }
 
 .feed {
   background-color: rgb(247, 208, 253);
   overflow-y: scroll;
-  height:81vh;
+  min-height:81vh;
 }
 
 .send {
   background-color: white;
-  height:8vh;
+  min-height:8vh;
 }
 .coloum-left{
   height: 100vh;

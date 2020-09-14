@@ -19,12 +19,8 @@
 :host button {
   height: 60px;
   width: 60px;
-  margin-right: 20px;
   font-size: 25px;
   border-radius: 100%;
-  margin-top: -2px;
-}
-
-:host .trash {
-  margin-right: 35px;
+  margin-right: 10px;
+  float: right!important;
 }

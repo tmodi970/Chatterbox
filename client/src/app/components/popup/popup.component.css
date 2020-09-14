@@ -1,11 +1,12 @@
 :host .card {
-  width: 70vw;
+  width: 65vw;
   position: absolute;
   z-index: 200;
   margin-top: 20vh;
   display: block;
   left: 50%;
-  margin-left: -35%;
+  margin-left: -50%;
+  margin-right: 2%;
   box-shadow: 14px 14px 39px -3px rgba(0, 0, 0, 0.75);
 }
 
