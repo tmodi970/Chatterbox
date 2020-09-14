@@ -1,5 +1,5 @@
-<ul>
-  <li *ngFor="let message of activeConversation">
+<div class="row" width="70vw!important">
+  <div class="col-sm-12" *ngFor="let message of activeConversation">
     <div *ngIf="message.sender === 'you'">
       <div class="message you">
         <p>{{message.message}}</p>
@@ -11,5 +11,5 @@
         <p class="has-text-white">{{message.message}}</p>
       </div>
     </div>
-  </li>
-</ul>
+  </div>
+</div>

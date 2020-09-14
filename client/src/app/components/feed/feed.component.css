@@ -19,13 +19,13 @@
 :host .peer {
   background-color: rgb(205, 17, 226);
   float: left;
-  margin-left: 2vw
+  /* margin-left: 2vw */
 }
 
 :host .you {
   background-color: white;
   float: right;
-  margin-right: 35.3vw;
+  /* margin-right: 35.3vw; */
 }
 
 :host .peer:before {
