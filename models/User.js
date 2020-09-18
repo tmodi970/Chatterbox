@@ -26,9 +26,7 @@
      }]
    }]
  })
-
- // Validate full name.
- userSchema.path('fullName').validate(function (value) {
+userSchema.path('fullName').validate(function (value) {
    return value.match(/^[a-zA-Z ]+$/)
  }, 'Please provide a full name with characters only.')
 
@@ -36,7 +34,6 @@
    return value.trim().length <= 20
  }, 'Please provide a full name with a length of maximum 20 characters.')
 
- // Validate email.
  userSchema.path('email').validate(function (value) {
    return value.match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
  }, 'Please provide an email with a valid format.')
@@ -45,12 +42,10 @@
    return value.trim().length <= 50
  }, 'Please provide an email with a length of maximum 50 characters.')
 
- // Validate password.
  userSchema.path('password').validate(function (value) {
    return value.trim().length >= 5 && value.trim().length <= 30
  }, 'Please provide a password with a length of minimum 5 characters and maximum 30 characters.')
 
- // Hashing of password.
  userSchema.pre('save', async function (next) {
    if (!this.isModified('password')) { next() }
 
@@ -62,8 +57,8 @@
    next()
  })
 
- // Compare guessed password to stored password.
- userSchema.methods.compare = function (password) {
+ userSchema.methods.compare =
+  function (password) {
    return bcrypt.compareAsync(password, this.password)
  }
 

@@ -13,7 +13,6 @@
        } catch (err) { res.send({ resStatus: 'error' }) }
      })
 
- // Search and return the users with the matching query (full name or email)
  router.route('/query')
      .post(async (req, res) => {
        try {
@@ -69,7 +68,7 @@
          for (let i = 0; i < conversations.length; i++) {
            structuredConversations[conversations[i].id] = conversations[i].messages
          }
-
+        //  console.log(structuredConversation);
          res.send({ resStatus: 'success', conversations: structuredConversations })
        } catch (err) { res.send({ resStatus: 'error' }) }
      })

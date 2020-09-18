@@ -20,7 +20,7 @@
 .feed {
   background-color: rgb(247, 208, 253);
   overflow-y: scroll;
-  min-height:81vh;
+  height:81vh;
 }
 
 .send {

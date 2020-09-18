@@ -1,10 +1,8 @@
  'use strict'
 
  const mongooseConfiguration = require('./config/mongoose')
- const passportConfiguration = require('./config/passport')
  const express = require('./config/express')
  const path = require('path')
- const passport = require('passport')
  const session = require('express-session')
  const MongoStore = require('connect-mongo')(session)
  const csrf = require('csurf')
@@ -20,8 +18,8 @@
 
  
  app.use(session({
-   name: 'PeerChat',
-secret: 'super',
+   name: 'ChatterBox',
+  secret: 'super',
    resave: false,
    saveUninitialized: false,
    store: new MongoStore({ url: app.get('connectionString') }),
@@ -30,14 +28,6 @@ secret: 'super',
      expires: 99999999999
    }
  }))
-
- app.use((req, res, next) => {
-   passportConfiguration.run(req)
-
-   next()
- })
-
- app.use(passport.initialize())
 
  app.use((req, res, next) => {
    res.locals.login = req.session.login
@@ -56,7 +46,6 @@ secret: 'super',
  app.use('/', require('./routes/index'))
  app.use('/user', require('./routes/user'))
  app.use('/chat', require('./routes/chat'))
- app.use('/auth', require('./routes/auth'))
  app.use('/signout', require('./routes/signout'))
 
  app.use(csrf())

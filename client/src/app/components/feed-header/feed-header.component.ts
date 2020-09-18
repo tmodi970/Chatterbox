@@ -166,19 +166,6 @@ export class FeedHeaderComponent implements OnInit {
             stream: stream,
             objectMode: true,
             reconnectTimer: 250,
-            config: {
-              iceServers: [{
-                  urls: 'stun:numb.viagenie.ca',
-                  username: 'rasmus.falk@live.se',
-                  credential: 'M581Z6DzR97BPSQltlbvq2jGXwObjoZB'
-                },
-                {
-                  urls: 'turn:numb.viagenie.ca',
-                  username: 'rasmus.falk@live.se',
-                  credential: 'M581Z6DzR97BPSQltlbvq2jGXwObjoZB'
-                }
-              ]
-            }
           })
 
           peerx.on('error', err => {
